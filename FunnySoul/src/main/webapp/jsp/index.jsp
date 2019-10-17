@@ -12,15 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-    <link rel="stylesheet" href="../resource/css/index.css">
-    <link rel="stylesheet" href="../resource/layui/css/layui.css">
-    <link rel="stylesheet" href="../resource/css/search.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/index.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/layui/css/layui.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/search.css">
 </head>
 <body>
     <div id="navigation">
         <div class="layui-row width_margin">
             <div class="layui-col-md2">
-                <img src="../resource/image/logo.png"/>
+                <img src="${pageContext.request.contextPath}/resource/image/logo.png"/>
             </div>
             <div class="layui-col-md1 navigation_size by_color">
                 <a href="#">首页</a>
@@ -54,37 +54,10 @@
     <div class="width_margin">123132</div>
 
 
-    <script src="../resource/layui/layui.js"></script>
-    <script src="../resource/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript">
-        $('.content').on('keyup', function() {
-            $('.clear').show();
-        });
-        $('.clear').click(function() {
-            $('.content').val('');
-        });
+    <script src="${pageContext.request.contextPath}/resource/layui/layui.js"></script>
+    <script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/lk/home.js"></script>
 
-        $(function(){
-            $(".by_color:eq(0)").css("background-color","#FFF300");
-            load();
-        })
-
-        $(".show_user_settin").hover(function(){
-            $("#user_settin").show(100);
-        },function(){
-            $("#user_settin").hide(100);
-        })
-
-        $("#user_settin ul li").hover(function(){
-            $(this).css("background-color","#FFF300");
-        },function(){
-            $(this).css("background-color","#FFDC00");
-        })
-
-        $(".by_color").click(function(){
-            $(this).css("background-color","#FFF300");
-            $(this).siblings().css("background-color","#FFDC00");
-        })
-    </script>
+    <script src="${pageContext.request.contextPath}/resource/layui/layui.js"></script>
 </body>
 </html>
