@@ -34,7 +34,6 @@
 	content: "";
 	/* width: 25px; */
 	height: 25px;
-	background-image:url('${pageContext.request.contextPath}/resource/image/del.svg');
 	background-size: 25px 25px;
 	cursor:pointer;
 }

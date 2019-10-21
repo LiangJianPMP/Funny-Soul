@@ -11,8 +11,6 @@ li {
     /* margin:7px; padding:5px;  */
     display: block;
     clear: both;
-
-    /* margin-top: 30px; */
 }
 
 .leift {
@@ -21,8 +19,7 @@ li {
     height: 65px;
     float: left;
     border-radius: 5%;
-    background-color: red;
-
+    background-color: #ffffff;
 }
 
 /* .leift :hover{
@@ -33,11 +30,13 @@ li {
 .rigth {
     border: 1px solid red;
     width: 540px;
-    height: 710px;
     margin-left: 9px;
-    margin-top: 0px;
+    margin-bottom: 30px;
     float: left;
     border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow:0 0 20px rgba(0,0,0,.04);
+    padding: 20px;
 }
 
 .leift_div {
@@ -45,7 +44,12 @@ li {
             transition-duration:0.2s; */
     width: 100%;
     height: 100%;
-    filter: opacity(0);
+    /*filter: opacity(0);*/
+}
+
+.leift_div img{
+    width: 100%;
+    height: 100%;
 }
 
 /*
@@ -60,4 +64,17 @@ li {
         } */
 #cartoon-ul{
     margin-left: 25%;
+}
+
+.layui-flow-more{
+    clear: both;
+    margin-right: 36%;
+}
+
+.rigth p{
+    margin: 20px 0px;
+}
+
+.rigth .post_operation{
+    margin-top: 20px;
 }
