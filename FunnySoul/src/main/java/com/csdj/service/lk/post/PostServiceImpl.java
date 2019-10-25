@@ -27,4 +27,15 @@ public class PostServiceImpl implements PostService {
     public int show_Post_Count() {
         return postMapper.getSelect_Post_Count();
     }
+
+    @Override
+    public boolean show_Post_Praise(int postId, int praisePeopleId) {
+        return postMapper.getInsert_Post_Praise(postId,praisePeopleId);
+    }
+
+    @Override
+    public FsPost show_One_Post(int id) {
+        return postMapper.getSelect_One_Post(id);
+    }
+
 }

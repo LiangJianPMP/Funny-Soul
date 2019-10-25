@@ -22,4 +22,19 @@ public interface PostMapper {
      */
     int getSelect_Post_Count();
 
+    /**
+     * 用户帖子点赞
+     * @param postId 帖子id
+     * @param praisePeopleId 点赞人id
+     * @return 成功，失败
+     */
+    boolean getInsert_Post_Praise(@Param("postId") int postId,@Param("praisePeopleId")int praisePeopleId);
+
+    /**
+     * 查询指定帖子的信息
+     * @param id 帖子id
+     * @return 帖子详细详细
+     */
+    FsPost getSelect_One_Post(@Param("id") int id);
+
 }

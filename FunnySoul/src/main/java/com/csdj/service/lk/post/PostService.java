@@ -21,4 +21,19 @@ public interface PostService {
      */
     int show_Post_Count();
 
+    /**
+     * 用户帖子点赞
+     * @param postId 帖子id
+     * @param praisePeopleId 点赞人id
+     * @return 成功，失败
+     */
+    boolean show_Post_Praise(int postId,int praisePeopleId);
+
+    /**
+     * 查询指定帖子的信息
+     * @param id 帖子id
+     * @return 帖子详细详细
+     */
+    FsPost show_One_Post(int id);
+
 }

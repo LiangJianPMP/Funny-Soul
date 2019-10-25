@@ -1,15 +1,34 @@
 package com.csdj.entity;
 
 
+import java.util.Date;
+
 public class FsComment {
 
   private long id;
   private long postId;
   private long praisePeopleId;
   private long respondentId;
-  private java.sql.Timestamp commentTime;
+  private Date commentTime;
   private String details;
+  private FsUser fsUser;
+  private FsPost fsPost;
 
+  public FsUser getFsUser() {
+    return fsUser;
+  }
+
+  public void setFsUser(FsUser fsUser) {
+    this.fsUser = fsUser;
+  }
+
+  public FsPost getFsPost() {
+    return fsPost;
+  }
+
+  public void setFsPost(FsPost fsPost) {
+    this.fsPost = fsPost;
+  }
 
   public long getId() {
     return id;
@@ -47,11 +66,11 @@ public class FsComment {
   }
 
 
-  public java.sql.Timestamp getCommentTime() {
+  public Date getCommentTime() {
     return commentTime;
   }
 
-  public void setCommentTime(java.sql.Timestamp commentTime) {
+  public void setCommentTime(Date commentTime) {
     this.commentTime = commentTime;
   }
 

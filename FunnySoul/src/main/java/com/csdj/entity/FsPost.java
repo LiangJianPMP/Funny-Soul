@@ -1,8 +1,8 @@
 package com.csdj.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
 
-import java.sql.Timestamp;
-import java.util.List;
+import java.util.Date;
 
 public class FsPost {
 
@@ -10,7 +10,8 @@ public class FsPost {
   private long posterId;
   private String postTitile;
   private String details;
-  private java.sql.Timestamp transmissionTime;
+  @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private Date transmissionTime;
   private long postTypeId;
   private long forwarding;
   private long firstLabel;
@@ -23,7 +24,15 @@ public class FsPost {
   private long isSelfAccount;
   private FsUser fsUser;
   private Integer pcount;
-  private FsPostlist fsPostlist;
+  private Integer comment;
+
+  public Integer getComment() {
+    return comment;
+  }
+
+  public void setComment(Integer comment) {
+    this.comment = comment;
+  }
 
   public FsUser getFsUser() {
     return fsUser;
@@ -39,14 +48,6 @@ public class FsPost {
 
   public void setPcount(Integer pcount) {
     this.pcount = pcount;
-  }
-
-  public FsPostlist getFsPostlist() {
-    return fsPostlist;
-  }
-
-  public void setFsPostlist(FsPostlist fsPostlist) {
-    this.fsPostlist = fsPostlist;
   }
 
   public long getId() {
@@ -85,11 +86,11 @@ public class FsPost {
   }
 
 
-  public java.sql.Timestamp getTransmissionTime() {
+  public Date getTransmissionTime() {
     return transmissionTime;
   }
 
-  public void setTransmissionTime(java.sql.Timestamp transmissionTime) {
+  public void setTransmissionTime(Date transmissionTime) {
     this.transmissionTime = transmissionTime;
   }
 

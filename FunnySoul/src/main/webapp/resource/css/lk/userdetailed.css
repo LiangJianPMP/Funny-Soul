@@ -1,0 +1,45 @@
+.show_userdetailed{
+	width: 1015px;
+	margin: 0 auto;
+}
+
+.user_left{
+	margin-right: 10px;
+}
+
+.user_post{
+	background-color: #FFFFFF;
+	margin-bottom: 30px;
+	padding: 50px;
+}
+
+.user_right{
+	background-color: #FFFFFF;
+	padding: 72px;
+}
+
+.user_right img{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	text-align: center;
+}
+
+.user_post>div{
+	padding: 10px;
+}
+
+.post_operation_button{
+	font-size: 20px;
+}
+
+.show_user_head img{
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+}
+
+#demo1{
+	margin-left: 12%;
+}

@@ -6,19 +6,21 @@
 <mapper namespace="com.csdj.dao.lk.post.PostMapper">
 
     <!-- 缓存 -->
-    <cache eviction="FIFO" flushInterval="60000" size="1024" readOnly="true"/>
+<!--    <cache eviction="FIFO" flushInterval="60000" size="1024" readOnly="true"/>-->
 
     <resultMap id="fsPost_news" type="FsPost">
         <id property="id" column="p_id"></id>
         <result property="pcount" column="pcount"></result>
+        <result property="comment" column="comment"></result>
         <association property="fsUser" column="fsUser" javaType="FsUser">
             <id property="id" column="u_id"></id>
         </association>
-        <association property="fsPostlist" column="fsPostlist" javaType="FsPostlist"></association>
     </resultMap>
 
     <select id="getSelect_Post" resultMap="fsPost_news">
-        SELECT p.id as p_id,p.postTitile,p.details,p.postTypeId,p.picturePath,p.videoPath,p.heat,(select count(1) from fs_praise where p.id=fs_praise.postId) as pcount,l.score,u.id as u_id,u.userName,u.avatarPath
+        SELECT p.id as p_id,u.userName,p.postTitile,p.details,p.postTypeId,p.picturePath,p.videoPath,p.heat,
+        (select count(1) from fs_praise where p.id=fs_praise.postId) as pcount,
+        (select count(1) from fs_comment where fs_comment.postId=p.id) as comment,u.id as u_id,u.userName,u.avatarPath
         FROM fs_post as p,fs_postlist as l,fs_user as u
         WHERE p.id=l.postId and p.posterId=u.id and p.isAudit=1
         ORDER BY l.score DESC
@@ -28,7 +30,19 @@
     <select id="getSelect_Post_Count" resultType="int">
         SELECT count(1)
         FROM fs_post as p,fs_postlist as l,fs_user as u
-        WHERE p.id=l.postId and p.posterId=u.id
+        WHERE p.id=l.postId and p.posterId=u.id and p.isAudit=1
+    </select>
+    
+    <insert id="getInsert_Post_Praise">
+        insert into fs_praise (praisePeopleId,postId) values (#{praisePeopleId},#{postId});
+    </insert>
+
+    <select id="getSelect_One_Post" resultMap="fsPost_news">
+        SELECT p.id as p_id,u.userName,p.postTitile,p.details,p.postTypeId,p.picturePath,p.videoPath,p.heat,p.transmissionTime,
+        (select count(1) from fs_praise where p.id=fs_praise.postId) as pcount,
+        (select count(1) from fs_comment where fs_comment.postId=p.id) as comment,u.id as u_id,u.userName,u.avatarPath
+        FROM fs_post as p,fs_postlist as l,fs_user as u
+        WHERE p.id=l.postId and p.posterId=u.id and p.isAudit=1 and p.id=#{id}
     </select>
 
 </mapper>

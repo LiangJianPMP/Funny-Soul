@@ -14,7 +14,7 @@ li {
 }
 
 .leift {
-    border: 1px solid red;
+    border: 1px solid #D8D9D8;
     width: 65px;
     height: 65px;
     float: left;
@@ -28,7 +28,7 @@ li {
        } */
 
 .rigth {
-    border: 1px solid red;
+    border: 1px solid #D8D9D8;
     width: 540px;
     margin-left: 9px;
     margin-bottom: 30px;
@@ -77,4 +77,37 @@ li {
 
 .rigth .post_operation{
     margin-top: 20px;
+}
+
+.comment{
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+}
+
+.text_comment{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+
+.but_comment{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.comment_show{
+    border: #A9A9A9 1px solid;
+    margin-top: 20px;
+}
+
+.user_comment{
+    padding: 10px;
+}
+
+.user_img{
+    border-radius: 100%;
+    text-align: center;
 }
