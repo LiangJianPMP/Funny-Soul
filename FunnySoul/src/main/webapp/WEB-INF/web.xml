@@ -5,7 +5,11 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Archetype Created Web Application</display-name>
   <welcome-file-list>
+<<<<<<< HEAD
     <welcome-file>jsp/lkl/Login.jsp</welcome-file>
+=======
+    <welcome-file>/index.jsp</welcome-file>
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
   </welcome-file-list>
   <context-param>
     <param-name>contextConfigLocation</param-name>

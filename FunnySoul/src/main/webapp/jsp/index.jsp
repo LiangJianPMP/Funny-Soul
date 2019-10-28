@@ -20,7 +20,7 @@
     <div id="navigation">
         <div class="layui-row width_margin">
             <div class="layui-col-md2">
-                <img src="${pageContext.request.contextPath}/resource/image/logo.png"/>
+                <img src="${pageContext.request.contextPath}/resource/image/logo.jpg"/>
             </div>
             <div class="layui-col-md1 navigation_size by_color">
                 <a href="#">首页</a>
@@ -42,10 +42,10 @@
                 <a href="#">个人账户<i class="layui-icon" id="iocn"> &#xe61a;</i></a>
                 <div id="user_settin">
                     <ul>
-                        <li><a href="#">注销</a></li>
-                        <li><a href="#">修改密码</a></li>
-                        <li><a href="#">帮助</a></li>
-                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#"><i class="layui-icon">&#xe65c;</i> 注销</a></li>
+                        <li><a href="#"><i class="layui-icon">&#xe673;</i> 修改密码</a></li>
+                        <li><a href="#"><i class="layui-icon">&#xe607;</i> 帮助</a></li>
+                        <li><a href="#"><i class="layui-icon">&#xe60b;</i> 关于我们</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,11 +53,9 @@
     </div>
     <div class="width_margin">123132</div>
 
+    <script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js" type="text/javascript" ></script>
+    <script src="${pageContext.request.contextPath}/resource/layui/layui.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/resource/js/index.js"></script>
 
-    <script src="${pageContext.request.contextPath}/resource/layui/layui.js"></script>
-    <script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/lk/home.js"></script>
-
-    <script src="${pageContext.request.contextPath}/resource/layui/layui.js"></script>
 </body>
 </html>

@@ -32,7 +32,11 @@
 
     <!-- 实现接口 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<<<<<<< HEAD
         <property name="basePackage" value="com.csdj.dao.lkl"/>
+=======
+        <property name="basePackage" value="com.csdj.dao"/>
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
     </bean>
     <!-- 自动扫描包/注解 -->
     <context:component-scan base-package="com.csdj.service.*"/>

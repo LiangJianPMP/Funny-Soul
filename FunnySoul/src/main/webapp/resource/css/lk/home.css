@@ -11,18 +11,15 @@ li {
     /* margin:7px; padding:5px;  */
     display: block;
     clear: both;
-
-    /* margin-top: 30px; */
 }
 
 .leift {
-    border: 1px solid red;
+    border: 1px solid #D8D9D8;
     width: 65px;
     height: 65px;
     float: left;
     border-radius: 5%;
-    background-color: red;
-
+    background-color: #ffffff;
 }
 
 /* .leift :hover{
@@ -31,13 +28,15 @@ li {
        } */
 
 .rigth {
-    border: 1px solid red;
+    border: 1px solid #D8D9D8;
     width: 540px;
-    height: 710px;
     margin-left: 9px;
-    margin-top: 0px;
+    margin-bottom: 30px;
     float: left;
     border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow:0 0 20px rgba(0,0,0,.1);
+    padding: 20px;
 }
 
 .leift_div {
@@ -45,7 +44,12 @@ li {
             transition-duration:0.2s; */
     width: 100%;
     height: 100%;
-    filter: opacity(0);
+    /*filter: opacity(0);*/
+}
+
+.leift_div img{
+    width: 100%;
+    height: 100%;
 }
 
 /*
@@ -60,4 +64,50 @@ li {
         } */
 #cartoon-ul{
     margin-left: 25%;
+}
+
+.layui-flow-more{
+    clear: both;
+    margin-right: 36%;
+}
+
+.rigth p{
+    margin: 20px 0px;
+}
+
+.rigth .post_operation{
+    margin-top: 20px;
+}
+
+.comment{
+    margin-top: 20px;
+    width: 100%;
+    display: none;
+}
+
+.text_comment{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+
+.but_comment{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.comment_show{
+    border: #A9A9A9 1px solid;
+    margin-top: 20px;
+}
+
+.user_comment{
+    padding: 10px;
+}
+
+.user_img{
+    border-radius: 100%;
+    text-align: center;
 }
