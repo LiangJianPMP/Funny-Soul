@@ -14,7 +14,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 扫描注解/包 -->
-    <context:component-scan base-package="com.csdj.servlet"/>
+    <context:component-scan base-package="com.csdj.servlet.*"/>
 
     <!-- 处理器映射 -->
     <mvc:annotation-driven>
@@ -62,15 +62,7 @@
             <list>
                 <!-- 这个类用于jsp视图解析 -->
                 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-                    <property name="prefix" value="/jsp/cjc/"/>
-                    <property name="suffix" value=".jsp"/>
-                </bean>
-                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-                    <property name="prefix" value="/jsp/lk/"/>
-                    <property name="suffix" value=".jsp"/>
-                </bean>
-                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-                    <property name="prefix" value="/jsp/lkl/"/>
+                    <property name="prefix" value="/jsp/"/>
                     <property name="suffix" value=".jsp"/>
                 </bean>
             </list>
@@ -103,4 +95,5 @@
 
     <!-- 加载静态资源 -->
     <mvc:resources location="/resource/" mapping="/resource/**"/>
+
 </beans>
