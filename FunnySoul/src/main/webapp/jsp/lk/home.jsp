@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/layui/css/layui.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/search.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/lk/home.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/lk/about.css">
 </head>
 <body>
 <div id="navigation">
@@ -45,29 +46,39 @@
                     <li><a href="#"><i class="layui-icon">&#xe65c;</i> 注销</a></li>
                     <li><a href="#"><i class="layui-icon">&#xe673;</i> 修改密码</a></li>
                     <li><a href="#"><i class="layui-icon">&#xe607;</i> 帮助</a></li>
-                    <li><a href="#"><i class="layui-icon">&#xe60b;</i> 关于我们</a></li>
+                    <li><a href="#" id="abouts"><i class="layui-icon">&#xe60b;</i> 关于我们</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-<div class="width_margin">
-    <!-- <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-          <legend>信息流 - 滚动加载</legend>
-        </fieldset>
+<div id="about">
+    <div class="layui-row">
+        <div id="exit" align="right"><i class="layui-icon" id="exitI">&#x1006;</i></div>
+        <div id="logo_funnySoul"><img src="${pageContext.request.contextPath}/resource/image/logo.jpg"></div>
+        <div id="show_funnySoul">
+            <h1 align="center">${about.softwareName} ${about.softwareVersion}</h1>
+        </div>
+        <div id="show_url">
+            <p align="center">${about.contactEmail}</p>
+        </div>
+        <div id="show_agreement" align="center">
+            <a>&lt;&lt;用户协议&gt;&gt;</a>
+            <a>&lt;&lt;隐私政策&gt;&gt;</a>
+        </div>
+        <div id="show_news">
+            <p align="center">&copy; ${about.companyName} ${about.companyIntroduction} ${about.contactNumber}</p>
+        </div>
+    </div>
+</div>
 
-        <ul class="flow-default" id="LAY_demo1"></ul> -->
-    <!-- <p><label for="wheelDelta">  滚动值:</label>(IE/Opera)<input type="text" id="wheelDelta" /></p>
-     <p><label for="detail"> 滚动值:(Firefox)</label><input type="text" id="detail" /></p> -->
-    <!-- <button onclick="load()">点我</button> -->
-    <!-- <div></div> -->
+<div class="width_margin">
     <ul id="cartoon-ul" class="flow-default"></ul>
 </div>
 
 <script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/resource/js/index.js" type="text/javascript"></script>
-
 <script src="${pageContext.request.contextPath}/resource/layui/layui.js"></script>
 <script type="text/javascript">
     layui.use('flow', function(){
@@ -84,7 +95,7 @@
                 likes=result;
             },
             'error':function () {
-                alert('有异常')
+                layer.msg('有异常');
             }
         });
 
@@ -128,7 +139,7 @@
                                     '                    <div class="leift_div"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+item.fsUser.id+'"><img src="'+item.fsUser.avatarPath+'"></a></div>' +
                                     '                </div>' +
                                     '                <div class="rigth">' +
-                                    '                   <h2>'+item.fsUser.userName+'</h2>' +
+                                    '                   <h2><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+item.fsUser.id+'">'+item.fsUser.userName+'</a></h2>' +
                                     '                   <div style="padding: 20px 0px;"><a href="${pageContext.request.contextPath}/sys/lk/postdetailed.html/'+item.id+'">'+item.details+'</a></div>' +
                                     s +
                                     '                   <div class="layui-row post_operation">' +
@@ -148,7 +159,7 @@
                             next(lis.join(''), page < res.pages);
                         },
                         error:function (data) {
-                            alert('有异常！');
+                            layer.msg('有异常');
                         }
                     });
                 }, 0);
@@ -173,13 +184,13 @@
                     'dataType':'html',
                     'success':function (result) {
                         if (result=='true'){
-                            alert('点赞成功！');
+                            layer.msg('点赞成功');
                         }else{
-                            alert('您已经点赞过了！');
+                            layer.msg('您已经点赞过了');
                         }
                     },
                     'error':function () {
-                        alert('有异常')
+                        layer.msg('有异常');
                     }
                 });
                 $(this).css('color','#ff0000');

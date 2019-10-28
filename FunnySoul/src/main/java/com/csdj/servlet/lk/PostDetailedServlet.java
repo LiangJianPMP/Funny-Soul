@@ -1,6 +1,7 @@
 package com.csdj.servlet.lk;
 
 import com.csdj.entity.FsComment;
+import com.csdj.service.lk.about.AboutService;
 import com.csdj.service.lk.comment.CommentService;
 import com.csdj.service.lk.post.PostService;
 import com.csdj.service.lk.praise.PraiseService;
@@ -21,19 +22,22 @@ import java.util.List;
 public class PostDetailedServlet {
 
     @Autowired
-    PostService postService;
+    private PostService postService;
 
     @Autowired
-    CommentService commentService;
+    private CommentService commentService;
 
     @Autowired
-    PraiseService praiseService;
+    private PraiseService praiseService;
+
+    @Autowired
+    private AboutService aboutService;
 
     @RequestMapping(value = "/postdetailed.html/{id}",method = RequestMethod.GET)
     public String postdetailed(@PathVariable int id, Model model){
         model.addAttribute("post",postService.show_One_Post(id));
-        model.addAttribute("comments",commentService.show_Comment(id,1,5));
         model.addAttribute("praise",praiseService.show_Is_Praise(id,1));
+        model.addAttribute("about",aboutService.show_About());
         return "lk/postdetailed";
     }
 
@@ -53,7 +57,6 @@ public class PostDetailedServlet {
     public List<FsComment> showComment(@RequestParam int postId,@RequestParam int page){
         return commentService.show_Comment(postId,page,5);
     }
-
 
 
 }

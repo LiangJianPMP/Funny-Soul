@@ -18,6 +18,7 @@ To change this template use File | Settings | File Templates.
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resource/layui/css/layui.css">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/search.css">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/lk/postdetailed.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/lk/about.css">
 	</head>
 	<body>
 		<div id="navigation">
@@ -47,7 +48,7 @@ To change this template use File | Settings | File Templates.
 							<li><a href="#"><i class="layui-icon">&#xe65c;</i> 注销</a></li>
 							<li><a href="#"><i class="layui-icon">&#xe673;</i> 修改密码</a></li>
 							<li><a href="#"><i class="layui-icon">&#xe607;</i> 帮助</a></li>
-							<li><a href="#"><i class="layui-icon">&#xe60b;</i> 关于我们</a></li>
+							<li><a href="#" id="abouts"><i class="layui-icon">&#xe60b;</i> 关于我们</a></li>
 						</ul>
 					</div>
 				</div>
@@ -56,10 +57,10 @@ To change this template use File | Settings | File Templates.
 		<div class="width_margin">
 			<div class="layui-row show_postdetailed">
 				<div class="layui-row">
-					<div class="layui-col-md1" id="show_user_head" align="center"><img src="${post.fsUser.avatarPath}"></div>
+					<div class="layui-col-md1" id="show_user_head" align="center"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/${post.fsUser.id}"><img src="${post.fsUser.avatarPath}"></a></div>
 					<div class="layui-col-md11">
 						<input type="hidden" value="${post.id}" id="postId">
-						<h2>${post.fsUser.userName}</h2>
+						<h2><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/${post.fsUser.id}">${post.fsUser.userName}</a></h2>
 						<p><fmt:formatDate value="${post.transmissionTime}" pattern="yyyy-MM-dd HH:mm:ss"/> </p>
 					</div>
 				</div>
@@ -71,7 +72,7 @@ To change this template use File | Settings | File Templates.
 						<video src="${post.videoPath}" controls="controls" width="100%"></video>
 					</c:if>
 					<c:if test="${post.postTypeId==3}">
-						<img src="${post.picturePath}" width="100%">
+						<img src="${post.picturePath}">
 					</c:if>
 					<!-- <img src="#" /> -->
 				</div>
@@ -92,24 +93,14 @@ To change this template use File | Settings | File Templates.
 						<h2>全部评论</h2>
 					</div>
 					<div style="padding-top: 8px;">
+						<input id="post_comment" type="hidden" value="${post.comment}">
 						<p>共有${post.comment}条评论</p>
 					</div>
 				</div>
-				<div class="layui-row">
-                    <c:if test="${comments=='[]'}"><h1 align="center">暂时没有评论，等待你的神评！</h1></c:if>
-                    <c:forEach var="comment" items="${comments}">
-                        <div class="layui-row comment_user">
-                            <div class="layui-row">
-                                <div class="layui-col-md1 show_comment_user_head" align="center"><img src="${comment.fsUser.avatarPath}"></div>
-                                <div class="layui-col-md11">
-                                    <h3>${comment.fsUser.userName}</h3>
-                                </div>
-                            </div>
-                            <div class="layui-row comment_user_details">
-                                <p>${comment.details}</p>
-                            </div>
-                        </div>
-                    </c:forEach>
+				<div class="layui-row" id="show_comment">
+					<c:if test="${post.comment=='0'}">
+						<h1 align="center">暂时没有评论，等待你的神评！</h1>
+					</c:if>
 				</div>
 				<div class="layui-row">
 					<div id="demo1"></div>
@@ -117,8 +108,28 @@ To change this template use File | Settings | File Templates.
 			</div>
 		</div>
 
-		<script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js" type="text/javascript"></script>
-		<script>
+		<div id="about">
+			<div class="layui-row">
+				<div id="exit" align="right"><i class="layui-icon" id="exitI">&#x1006;</i></div>
+				<div id="logo_funnySoul"><img src="${pageContext.request.contextPath}/resource/image/logo.jpg"></div>
+				<div id="show_funnySoul">
+					<h1 align="center">${about.softwareName} ${about.softwareVersion}</h1>
+				</div>
+				<div id="show_url">
+					<p align="center">${about.contactEmail}</p>
+				</div>
+				<div id="show_agreement" align="center">
+					<a>&lt;&lt;用户协议&gt;&gt;</a>
+					<a>&lt;&lt;隐私政策&gt;&gt;</a>
+				</div>
+				<div id="show_news">
+					<p align="center">&copy; ${about.companyName} ${about.companyIntroduction} ${about.contactNumber}</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
 			//评论
 			$("#but_comment").click(function () {
 				var postId = $("#postId").val();
@@ -131,15 +142,30 @@ To change this template use File | Settings | File Templates.
 						'dataType':'html',
 						'success':function (res) {
 							if (res == 'true'){
-								alert('评论成功！');
+								layui.use(['laypage', 'layer', 'jquery'], function() {
+									var laypage = layui.laypage,
+											layer = layui.layer,
+											jquery = layer.jquery;
+
+									//总页数大于页码总数
+									laypage.render({
+										elem: 'demo1',
+										count: $('#post_comment').val() //数据总数
+										,
+										jump: function(obj,first) {
+											pages(obj.curr);
+										}
+									});
+								});
+								layer.msg('评论成功');
 							}
 						},
 						'error':function () {
-							alert('有异常');
+							layer.msg('有异常');
 						}
 					})
 				}else {
-					alert('请先输入您需要评论的信息！');
+					layer.msg('请先输入您需要评论的信息');
 				}
 			});
 
@@ -154,13 +180,13 @@ To change this template use File | Settings | File Templates.
 						'dataType':'html',
 						'success':function (result) {
 							if (result=='true'){
-								alert('点赞成功！');
+								layer.msg('点赞成功');
 							}else{
-								alert('您已经点赞过了！');
+								layer.msg('您已经点赞过了');
 							}
 						},
 						'error':function () {
-							alert('有异常')
+							layer.msg('有异常');
 						}
 					});
 					$(this).css('color','#ff0000');
@@ -172,21 +198,50 @@ To change this template use File | Settings | File Templates.
 		<script src="${pageContext.request.contextPath}/resource/js/index.js"></script>
 		<script src="${pageContext.request.contextPath}/resource/layui/layui.js" type="text/javascript"></script>
 		<script>
+			function pages(curr){
+				$.ajax({
+					url: '${pageContext.request.contextPath}/sys/lk/showComment.json',
+					type: 'post',
+					data: 'postId='+$('#postId').val()+'&page='+curr,
+					dataType: 'json',
+					success: function (res) {
+						var str = '';
+						for (var i = 0;i < res.length;i++){
+							str += '<div class="layui-row comment_user">' +
+									'  <div class="layui-row">' +
+									'	  	<div class="layui-col-md1 show_comment_user_head" align="center"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+res[i].fsUser.id+'"> <img src="'+res[i].fsUser.avatarPath+'"/> </a></div>' +
+									'       <div class="layui-col-md11">' +
+									'			 <h3><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+res[i].fsUser.id+'">'+res[i].fsUser.userName+'</a></h3>' +
+									'       </div>' +
+									'   </div>' +
+									'   <div class="layui-row comment_user_details">' +
+									'       <p>'+res[i].details+'</p>' +
+									'   </div>' +
+									'</div>';
+						}
+						if (str != ''){
+							$('#show_comment').html(str);
+						}
+					},
+					error: function () {
+						alert('有异常')
+					}
+				});
+			}
 			layui.use(['laypage', 'layer', 'jquery'], function() {
 				var laypage = layui.laypage,
 					layer = layui.layer,
-					$ = layer.jquery;
+					jquery = layer.jquery;
 
 				//总页数大于页码总数
 				laypage.render({
 					elem: 'demo1',
-					count: 70 //数据总数
+					count: $('#post_comment').val() //数据总数
 						,
 					jump: function(obj,first) {
-
+						pages(obj.curr);
 					}
 				});
-
 			})
 		</script>
 

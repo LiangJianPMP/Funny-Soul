@@ -38,4 +38,13 @@ public class PostServiceImpl implements PostService {
         return postMapper.getSelect_One_Post(id);
     }
 
+    @Override
+    public List<FsPost> show_User_Post(int id, int page, int limit) {
+        return postMapper.getSelect_User_Post(id,(page-1)*limit,limit);
+    }
+
+    @Override
+    public int show_User_Post_Count(int id) {
+        return postMapper.getSelect_User_Post_Count(id);
+    }
 }

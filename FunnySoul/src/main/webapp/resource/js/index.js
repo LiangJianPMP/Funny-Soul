@@ -31,3 +31,11 @@ $(".by_color").click(function(){
     $(this).siblings().css("background-color","#001834");
     $(this).siblings().children('a').css("color","#FEFCFD");
 })
+
+$("#abouts").click(function () {
+    $("#about").show();
+})
+
+$("#exitI").click(function () {
+    $("#about").hide();
+})

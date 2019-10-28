@@ -3,6 +3,7 @@
 	background-color: #FFFFFF;
 	margin: 0 auto;
 	padding: 50px;
+	box-shadow:0 0 20px rgba(0,0,0,.1);
 }
 
 #show_user_head img{
@@ -50,8 +51,4 @@
 
 .comment_user_details{
 	padding-left: 50px;
-}
-
-#demo1{
-	margin-left: 17%;
 }

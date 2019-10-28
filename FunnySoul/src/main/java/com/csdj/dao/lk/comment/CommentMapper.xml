@@ -18,6 +18,7 @@
         SELECT u.id,u.userName,u.avatarPath,c.details,c.commentTime
         FROM fs_user as u,fs_comment as c,fs_post as p
         WHERE u.id=c.praisePeopleId and p.id=c.postId and p.id=#{postId}
+        ORDER BY c.id DESC
         limit #{page},#{limit}
     </select>
 

@@ -2,6 +2,7 @@ package com.csdj.servlet.lk;
 
 import com.csdj.entity.FsComment;
 import com.csdj.entity.FsPost;
+import com.csdj.service.lk.about.AboutService;
 import com.csdj.service.lk.comment.CommentService;
 import com.csdj.service.lk.post.PostService;
 import com.csdj.service.lk.praise.PraiseService;
@@ -31,8 +32,12 @@ public class HomeServlet {
     @Autowired
     private CommentService commentService;
 
+    @Autowired
+    private AboutService aboutService;
+
     @RequestMapping(value = "/home.html",method = RequestMethod.GET)
-    public String home(){
+    public String home(Model model){
+        model.addAttribute("about",aboutService.show_About());
         return "lk/home";
     }
 

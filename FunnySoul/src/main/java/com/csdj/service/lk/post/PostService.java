@@ -30,10 +30,22 @@ public interface PostService {
     boolean show_Post_Praise(int postId,int praisePeopleId);
 
     /**
-     * 查询指定帖子的信息
+     * 显示指定帖子的信息
      * @param id 帖子id
      * @return 帖子详细详细
      */
     FsPost show_One_Post(int id);
+
+    /**
+     * 显示指定用户发的帖子
+     * @return 帖子
+     */
+    List<FsPost> show_User_Post(int id,int page,int limit);
+
+    /**
+     * 显示指定用户帖子数量
+     * @return 数量
+     */
+    int show_User_Post_Count(int id);
 
 }
