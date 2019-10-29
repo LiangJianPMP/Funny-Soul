@@ -1,17 +1,25 @@
 package com.csdj.entity;
 
+<<<<<<< HEAD
+=======
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
 
 public class FsPost {
 
   private long id;
   private long posterId;
+<<<<<<< HEAD
+  private String details;
+  private java.sql.Timestamp transmissionTime;
+=======
   private String postTitile;
   private String details;
   @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private Date transmissionTime;
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
   private long postTypeId;
   private long forwarding;
   private long firstLabel;
@@ -22,6 +30,9 @@ public class FsPost {
   private long heat;
   private long isTopping;
   private long isSelfAccount;
+<<<<<<< HEAD
+
+=======
   private FsUser fsUser;
   private Integer pcount;
   private Integer comment;
@@ -49,6 +60,7 @@ public class FsPost {
   public void setPcount(Integer pcount) {
     this.pcount = pcount;
   }
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
 
   public long getId() {
     return id;
@@ -68,6 +80,8 @@ public class FsPost {
   }
 
 
+<<<<<<< HEAD
+=======
   public String getPostTitile() {
     return postTitile;
   }
@@ -77,6 +91,7 @@ public class FsPost {
   }
 
 
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
   public String getDetails() {
     return details;
   }
@@ -86,11 +101,19 @@ public class FsPost {
   }
 
 
+<<<<<<< HEAD
+  public java.sql.Timestamp getTransmissionTime() {
+    return transmissionTime;
+  }
+
+  public void setTransmissionTime(java.sql.Timestamp transmissionTime) {
+=======
   public Date getTransmissionTime() {
     return transmissionTime;
   }
 
   public void setTransmissionTime(Date transmissionTime) {
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
     this.transmissionTime = transmissionTime;
   }
 

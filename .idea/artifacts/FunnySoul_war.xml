@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FunnySoul:war">
+    <output-path>$PROJECT_DIR$/FunnySoul/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>FunnySoul</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Funny Soul.war">
+      <element id="artifact" artifact-name="FunnySoul:war exploded" />
+    </root>
+  </artifact>
+</component>

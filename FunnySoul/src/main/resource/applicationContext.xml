@@ -29,14 +29,17 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>
+
     <!-- 实现接口 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<<<<<<< HEAD
+        <property name="basePackage" value="com.csdj.dao.lkl"/>
+=======
         <property name="basePackage" value="com.csdj.dao"/>
+>>>>>>> 676bec12309a10b52f690b34505fc619d1ccc2f1
     </bean>
-
     <!-- 自动扫描包/注解 -->
-    <context:component-scan base-package="com.csdj.service"/>
-
+    <context:component-scan base-package="com.csdj.service.*"/>
 
     <!-- 事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -55,8 +58,5 @@
         <aop:pointcut expression="execution(* com.csdj.service.*.*(..))" id="pointcut"/>
         <aop:advisor advice-ref="advice" pointcut-ref="pointcut"/>
     </aop:config>
-
-    <!-- 自动扫描包/注解 -->
-    <context:component-scan base-package="com.csdj.service"/>
 
 </beans>
