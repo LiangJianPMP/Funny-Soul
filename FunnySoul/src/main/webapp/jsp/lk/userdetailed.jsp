@@ -34,9 +34,8 @@ To change this template use File | Settings | File Templates.
             </div>
             <div class="layui-col-md6">
                 <div class="search" id="navigation_search">
-                    <span class="s_con"><input type="text" class="content" placeholder="请输入搜索内容"><i
-                            class="clear"></i></span>
-                    <span class="s_btn"><i class="layui-icon">&#xe615;</i> 搜索</span>
+                    <span class="s_con"><input type="text" id="keywords" value="${keywords}" class="content" placeholder="请输入搜索内容"><i class="clear"></i></span>
+                    <span class="s_btn" id="search"><i class="layui-icon">&#xe615;</i> 搜索</span>
                 </div>
             </div>
             <div class="layui-col-md1 navigation_size">
@@ -66,7 +65,7 @@ To change this template use File | Settings | File Templates.
 			<div class="layui-col-md3 user_right">
                 <input id="userId" type="hidden" value="${user.id}">
                 <input id="user_count" type="hidden" value="${user_count}">
-				<div class="layui-row"><img src="${user.avatarPath}"/></div>
+				<div class="layui-row"><img src="${pageContext.request.contextPath}${user.avatarPath}"/></div>
 				<div class="layui-row"><h2 align="center">${user.userName}</h2></div>
 			</div>
 		</div>
@@ -93,36 +92,10 @@ To change this template use File | Settings | File Templates.
     </div>
 
     <script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
-        //点赞
-        $(".post_pcount_button").click(function () {
-            if ($(this).css('color') == 'rgb(119, 119, 119)'){
-                var postId = $(this).parent().prev().prev().val();
-                $.ajax({
-                    'url':'${pageContext.request.contextPath}/sys/lk/pcount.html',
-                    'type':'post',
-                    'data':'postId='+postId,
-                    'dataType':'html',
-                    'success':function (result) {
-                        if (result=='true'){
-                            layer.msg('点赞成功');
-                        }else{
-                            layer.msg('您已经点赞过了');
-                        }
-                    },
-                    'error':function () {
-                        layer.msg('有异常');
-                    }
-                });
-                $(this).css('color','#ff0000');
-                var pcount = parseInt($(this).children('span').text())+1;
-                $(this).html('<i class="layui-icon">&#xe6c6;</i> <span>'+pcount+"</span>");
-            }
-        })
-    </script>
 	<script src="${pageContext.request.contextPath}/resource/js/index.js"></script>
     <script src="${pageContext.request.contextPath}/resource/layui/layui.js" type="text/javascript"></script>
     <script>
+
         var likes;
         $(function () {
             $.ajax({
@@ -137,6 +110,15 @@ To change this template use File | Settings | File Templates.
                     alert('有异常');
                 }
             });
+
+        });
+
+        //搜索
+        $('#search').click(function () {
+            var keywords = $('#keywords').val();
+            if (keywords!=null && keywords!='') {
+                location.href='${pageContext.request.contextPath}/sys/lk/search.html?keywords='+keywords;
+            }
         });
 
         function pages(curr){
@@ -150,24 +132,22 @@ To change this template use File | Settings | File Templates.
                     $(res).each(function () {
                         var postTypeIdStr = '';
                         if (this.postTypeId==2) {
-                            postTypeIdStr = '<video src="'+this.videoPath+'" controls="controls" width="100%"></video>';
-                        }else if (this.postTypeId==2){
-                            postTypeIdStr = '<img src="'+this.picturePath+'">';
+                            postTypeIdStr = '<video src="${pageContext.request.contextPath}'+this.videoPath+'" controls="controls" width="100%"></video>';
+                        }else if (this.postTypeId==3){
+                            postTypeIdStr = '<img width="100%" src="${pageContext.request.contextPath}'+this.picturePath+'">';
                         }
 
-                        var praiseStr = '';
+                        var praiseStr = '<div class="layui-col-md2"><a class="post_operation_button post_pcount_button"><i class="layui-icon">&#xe6c6;</i> <span>'+this.pcount+'</span></a></div>';
                         for (var i = 0;i < likes.length;i++){
                             if (this.id==likes[i]){
                                 praiseStr = '<div class="layui-col-md2"><a class="post_operation_button post_pcount_button" style="color: red;"><i class="layui-icon">&#xe6c6;</i> <span>'+this.pcount+'</span></a></div>';
                                 break;
-                            }else{
-                                praiseStr = '<div class="layui-col-md2"><a class="post_operation_button post_pcount_button"><i class="layui-icon">&#xe6c6;</i> <span>'+this.pcount+'</span></a></div>';
                             }
                         }
 
                         str += '<div class="layui-row user_post">' +
                             '      <div class="layui-row">' +
-                            '       <div class="layui-col-md2 show_user_head" align="center"><img src="'+this.fsUser.avatarPath+'"/></div>' +
+                            '       <div class="layui-col-md2 show_user_head" align="center"><img src="${pageContext.request.contextPath}'+this.fsUser.avatarPath+'"/></div>' +
                             '       <div class="layui-col-md10">' +
                             '        <h2>'+this.fsUser.userName+'</h2>' +
                             '        <p>'+this.transmissionTime+'</p>' +
@@ -198,20 +178,49 @@ To change this template use File | Settings | File Templates.
                 }
             });
         }
+
         layui.use(['laypage', 'layer', 'jquery'], function() {
             var laypage = layui.laypage,
                 layer = layui.layer,
                 jquery = layer.jquery;
 
+            //点赞
+            $(document).on('click',".post_pcount_button",function(){
+                if ($(this).css('color') == 'rgb(119, 119, 119)'){
+                    var postId = $(this).parent().prev().prev().val();
+                    $.ajax({
+                        'url':'${pageContext.request.contextPath}/sys/lk/pcount.html',
+                        'type':'post',
+                        'data':'postId='+postId,
+                        'dataType':'html',
+                        'success':function (result) {
+                            if (result=='true'){
+                                layer.msg('点赞成功');
+                            }else{
+                                layer.msg('您已经点赞过了');
+                            }
+                        },
+                        'error':function () {
+                            layer.msg('有异常');
+                        }
+                    });
+                    $(this).css('color','#ff0000');
+                    var pcount = parseInt($(this).children('span').text())+1;
+                    $(this).html('<i class="layui-icon">&#xe6c6;</i> <span>'+pcount+"</span>");
+                }
+            });
+
             //总页数大于页码总数
             laypage.render({
                 elem: 'demo1',
+                limit: 5,
                 count: $('#user_count').val() //数据总数
                 ,
                 jump: function(obj,first) {
                     pages(obj.curr);
                 }
             });
+
         })
 	</script>
 

@@ -12,4 +12,16 @@
         select * from fs_user where id=#{id}
     </select>
 
+    <select id="getSelect_Users" resultType="FsUser">
+        select * from fs_user
+        where userName like '%${userName}%'
+        limit #{page},#{limit}
+    </select>
+
+    <select id="getSelect_User_Count" resultType="int">
+        select count(1)
+        from fs_user
+        where userName like '%${userName}%'
+    </select>
+
 </mapper>

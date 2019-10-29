@@ -32,8 +32,8 @@
         </div>
         <div class="layui-col-md6">
             <div class="search"  id="navigation_search">
-                <span class="s_con"><input type="text" class="content" placeholder="请输入搜索内容"><i class="clear"></i></span>
-                <span class="s_btn"><i class="layui-icon">&#xe615;</i> 搜索</span>
+                <span class="s_con"><input type="text" id="keywords" class="content" placeholder="请输入搜索内容"><i class="clear"></i></span>
+                <span class="s_btn" id="search"><i class="layui-icon">&#xe615;</i> 搜索</span>
             </div>
         </div>
         <div class="layui-col-md1 navigation_size">
@@ -81,10 +81,20 @@
 <script src="${pageContext.request.contextPath}/resource/js/index.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/resource/layui/layui.js"></script>
 <script type="text/javascript">
+
+    //搜索
+    $('#search').click(function () {
+        var keywords = $('#keywords').val();
+        if (keywords!=null && keywords!='') {
+            location.href='${pageContext.request.contextPath}/sys/lk/search.html?keywords='+keywords;
+        }
+    })
+
     layui.use('flow', function(){
         var $ = layui.jquery; //不用额外加载jQuery，flow模块本身是有依赖jQuery的，直接用即可。
         var flow = layui.flow;
 
+        //查询已经点赞的帖子
         var likes;
         $.ajax({
             'url':'${pageContext.request.contextPath}/sys/lk/showLike.json',
@@ -117,26 +127,24 @@
                             //假设你的列表返回在data集合中
                             layui.each(res.data, function(index, item){
                                 var s = '';
-                                var x = '';
+                                var x = '<a class="pcount_button"><i class="layui-icon">&#xe6c6;</i> <span>'+item.pcount+'</span></a>';
                                 var str = '';
                                 if (item.postTypeId==2) {
-                                    s='<div><video controls="controls" preload="preload" src="'+item.videoPath+'"></video></div>';
+                                    s='<div><video width="70%" controls="controls" preload="preload" src="${pageContext.request.contextPath}'+item.videoPath+'"></video></div>';
                                 } else if (item.postTypeId==3) {
-                                    s='<div><img src="'+item.picturePath+'"></div>';
+                                    s='<div><img width="50%" src="${pageContext.request.contextPath}'+item.picturePath+'"></div>';
                                 }
 
                                 for (var i = 0;i < likes.length;i++){
                                     if (item.id==likes[i]){
                                         x = '<a class="pcount_button" style="color: red;"><i class="layui-icon">&#xe6c6;</i> <span>'+item.pcount+'</span></a>';
                                         break;
-                                    }else{
-                                        x = '<a class="pcount_button"><i class="layui-icon">&#xe6c6;</i> <span>'+item.pcount+'</span></a>';
                                     }
                                 }
 
                                 str = '<li class="cartoon-li" style="padding-top:20px">' +
                                     '                <div class="leift">' +
-                                    '                    <div class="leift_div"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+item.fsUser.id+'"><img src="'+item.fsUser.avatarPath+'"></a></div>' +
+                                    '                    <div class="leift_div"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+item.fsUser.id+'"><img src="${pageContext.request.contextPath}'+item.fsUser.avatarPath+'"></a></div>' +
                                     '                </div>' +
                                     '                <div class="rigth">' +
                                     '                   <h2><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+item.fsUser.id+'">'+item.fsUser.userName+'</a></h2>' +

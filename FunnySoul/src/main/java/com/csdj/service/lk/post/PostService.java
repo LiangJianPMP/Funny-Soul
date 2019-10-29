@@ -48,4 +48,17 @@ public interface PostService {
      */
     int show_User_Post_Count(int id);
 
+    /**
+     * 显示指定名称帖子
+     * @return 帖子
+     */
+    List<FsPost> show_Name_Posts(String details,int page,int limit);
+
+    /**
+     * 显示指定帖子的数量
+     * @param details 帖子名称
+     * @return 数量
+     */
+    int show_Posts_Count(String details);
+
 }

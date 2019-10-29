@@ -34,7 +34,6 @@ public class UserDetailedServlet {
 
     @RequestMapping(value = "/userdetailed.html/{id}",method = RequestMethod.GET)
     public String userdetailed(@PathVariable int id, Model model){
-        System.out.println(userService.show_One_User(id).getId());
         model.addAttribute("user",userService.show_One_User(id));
         model.addAttribute("user_count",postService.show_User_Post_Count(id));
         model.addAttribute("praiseCount",praiseService.show_Praise_Count(1));

@@ -34,8 +34,8 @@ To change this template use File | Settings | File Templates.
 				</div>
 				<div class="layui-col-md6">
 					<div class="search" id="navigation_search">
-						<span class="s_con"><input type="text" class="content" placeholder="请输入搜索内容"><i class="clear"></i></span>
-						<span class="s_btn"><i class="layui-icon">&#xe615;</i> 搜索</span>
+						<span class="s_con"><input type="text" id="keywords" value="${keywords}" class="content" placeholder="请输入搜索内容"><i class="clear"></i></span>
+						<span class="s_btn" id="search"><i class="layui-icon">&#xe615;</i> 搜索</span>
 					</div>
 				</div>
 				<div class="layui-col-md1 navigation_size">
@@ -57,7 +57,7 @@ To change this template use File | Settings | File Templates.
 		<div class="width_margin">
 			<div class="layui-row show_postdetailed">
 				<div class="layui-row">
-					<div class="layui-col-md1" id="show_user_head" align="center"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/${post.fsUser.id}"><img src="${post.fsUser.avatarPath}"></a></div>
+					<div class="layui-col-md1" id="show_user_head" align="center"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/${post.fsUser.id}"><img src="${pageContext.request.contextPath}${post.fsUser.avatarPath}"></a></div>
 					<div class="layui-col-md11">
 						<input type="hidden" value="${post.id}" id="postId">
 						<h2><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/${post.fsUser.id}">${post.fsUser.userName}</a></h2>
@@ -69,10 +69,10 @@ To change this template use File | Settings | File Templates.
 				</div>
 				<div class="layui-row">
 					<c:if test="${post.postTypeId==2}">
-						<video src="${post.videoPath}" controls="controls" width="100%"></video>
+						<video src="${pageContext.request.contextPath}${post.videoPath}" autoplay="autoplay" controls="controls" width="100%"></video>
 					</c:if>
 					<c:if test="${post.postTypeId==3}">
-						<img src="${post.picturePath}">
+						<img width="100%" src="${pageContext.request.contextPath}${post.picturePath}">
 					</c:if>
 					<!-- <img src="#" /> -->
 				</div>
@@ -130,6 +130,31 @@ To change this template use File | Settings | File Templates.
 
 		<script src="${pageContext.request.contextPath}/resource/js/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript">
+			//点赞
+			$("#post_pcount_button").click(function () {
+				if ($(this).css('color') == 'rgb(119, 119, 119)'){
+					var postId = $("#postId").val();
+					$.ajax({
+						'url':'${pageContext.request.contextPath}/sys/lk/pcount.html',
+						'type':'post',
+						'data':'postId='+postId,
+						'dataType':'html',
+						'success':function (result) {
+							if (result=='true'){
+								layer.msg('点赞成功');
+							}else{
+								layer.msg('您已经点赞过了');
+							}
+						},
+						'error':function () {
+							layer.msg('有异常');
+						}
+					});
+					$(this).css('color','#ff0000');
+					var pcount = parseInt($(this).children('span').text())+1;
+					$(this).children('span').text(pcount);
+				}
+			});
 			//评论
 			$("#but_comment").click(function () {
 				var postId = $("#postId").val();
@@ -157,7 +182,8 @@ To change this template use File | Settings | File Templates.
 										}
 									});
 								});
-								layer.msg('评论成功');
+								// layer.msg('评论成功');
+								location.href='${pageContext.request.contextPath}/sys/lk/postdetailed.html/'+postId;
 							}
 						},
 						'error':function () {
@@ -168,32 +194,13 @@ To change this template use File | Settings | File Templates.
 					layer.msg('请先输入您需要评论的信息');
 				}
 			});
-
-			//点赞
-			$("#post_pcount_button").click(function () {
-				if ($(this).css('color') == 'rgb(119, 119, 119)'){
-					var postId = $("#postId").val();
-					$.ajax({
-						'url':'${pageContext.request.contextPath}/sys/lk/pcount.html',
-						'type':'post',
-						'data':'postId='+postId,
-						'dataType':'html',
-						'success':function (result) {
-							if (result=='true'){
-								layer.msg('点赞成功');
-							}else{
-								layer.msg('您已经点赞过了');
-							}
-						},
-						'error':function () {
-							layer.msg('有异常');
-						}
-					});
-					$(this).css('color','#ff0000');
-					var pcount = parseInt($(this).children('span').text())+1;
-					$(this).children('span').text(pcount);
+			//搜索
+			$('#search').click(function () {
+				var keywords = $('#keywords').val();
+				if (keywords!=null && keywords!='') {
+					location.href='${pageContext.request.contextPath}/sys/lk/search.html?keywords='+keywords;
 				}
-			})
+			});
 		</script>
 		<script src="${pageContext.request.contextPath}/resource/js/index.js"></script>
 		<script src="${pageContext.request.contextPath}/resource/layui/layui.js" type="text/javascript"></script>
@@ -209,7 +216,7 @@ To change this template use File | Settings | File Templates.
 						for (var i = 0;i < res.length;i++){
 							str += '<div class="layui-row comment_user">' +
 									'  <div class="layui-row">' +
-									'	  	<div class="layui-col-md1 show_comment_user_head" align="center"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+res[i].fsUser.id+'"> <img src="'+res[i].fsUser.avatarPath+'"/> </a></div>' +
+									'	  	<div class="layui-col-md1 show_comment_user_head" align="center"><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+res[i].fsUser.id+'"> <img src="${pageContext.request.contextPath}'+res[i].fsUser.avatarPath+'"/> </a></div>' +
 									'       <div class="layui-col-md11">' +
 									'			 <h3><a href="${pageContext.request.contextPath}/sys/lk/userdetailed.html/'+res[i].fsUser.id+'">'+res[i].fsUser.userName+'</a></h3>' +
 									'       </div>' +
@@ -236,6 +243,7 @@ To change this template use File | Settings | File Templates.
 				//总页数大于页码总数
 				laypage.render({
 					elem: 'demo1',
+					limit: 5,
 					count: $('#post_comment').val() //数据总数
 						,
 					jump: function(obj,first) {

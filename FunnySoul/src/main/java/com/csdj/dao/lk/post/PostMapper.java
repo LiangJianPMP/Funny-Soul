@@ -49,4 +49,17 @@ public interface PostMapper {
      */
     int getSelect_User_Post_Count(@Param("id")int id);
 
+    /**
+     * 查询指定名称帖子
+     * @return 帖子
+     */
+    List<FsPost> getSelect_Name_Posts(@Param("details") String details,@Param("page")int page,@Param("limit")int limit);
+
+    /**
+     * 查询指定帖子的数量
+     * @param details 帖子名称
+     * @return 数量
+     */
+    int getSelect_Posts_Count(@Param("details") String details);
+
 }

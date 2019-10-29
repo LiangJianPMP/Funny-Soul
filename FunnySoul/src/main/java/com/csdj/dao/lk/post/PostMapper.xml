@@ -60,4 +60,19 @@
         WHERE p.id=l.postId and p.posterId=u.id and p.isAudit=1 and u.id=#{id}
     </select>
 
+    <select id="getSelect_Name_Posts" resultMap="fsPost_news">
+        SELECT p.id as p_id,u.userName,p.postTitile,p.details,p.postTypeId,p.picturePath,p.videoPath,p.heat,p.transmissionTime,
+        (select count(1) from fs_praise where p.id=fs_praise.postId) as pcount,
+        (select count(1) from fs_comment where fs_comment.postId=p.id) as comment,u.id as u_id,u.userName,u.avatarPath
+        FROM fs_post as p,fs_postlist as l,fs_user as u
+        WHERE p.id=l.postId and p.posterId=u.id and p.isAudit=1 and p.details like '%${details}%'
+        limit #{page},#{limit}
+    </select>
+
+    <select id="getSelect_Posts_Count" resultType="int">
+        SELECT count(1)
+        FROM fs_post as p,fs_postlist as l,fs_user as u
+        WHERE p.id=l.postId and p.posterId=u.id and p.isAudit=1 and p.details like '%${details}%'
+    </select>
+
 </mapper>
