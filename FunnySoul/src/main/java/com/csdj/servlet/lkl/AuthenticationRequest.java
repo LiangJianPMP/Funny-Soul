@@ -94,9 +94,9 @@ public class AuthenticationRequest {
                 return null;
             }
         }catch (Exception e){
-            return "Login";
+            return "../jsp/lkl/Login";
         }
-        return "Login";
+        return "../jsp/lkl/Login";
 
     }
 
@@ -111,9 +111,9 @@ public class AuthenticationRequest {
                 return null;
             }
         }catch (Exception e){
-            return "Login";
+            return "../jsp/lkl/Login";
         }
-        return "Login";
+        return "../jsp/lkl/Login";
     }
 
 
