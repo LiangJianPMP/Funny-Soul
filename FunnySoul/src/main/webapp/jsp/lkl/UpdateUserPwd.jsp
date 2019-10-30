@@ -172,7 +172,7 @@
         <!-- 模块1 -->
 
         <div id="div-1">
-                <form class="layui-form" action="${pageContext.request.contextPath}/AuthenticationRequest/Login" method="post">
+            <form class="layui-form" action="${pageContext.request.contextPath}/AuthenticationRequest/Login" method="post">
                 <div class="layui-form-item">
 
                     <div class="layui-inline">
@@ -196,45 +196,45 @@
 
                 <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1" style="width: 300px;">登录</button>
 
-<%--                <a>忘记密码</a> |--%>
+                <a>忘记密码</a> |
                 <a href="${pageContext.request.contextPath}/jsp/lkl/Register.jsp">注册</a>
-                </form>
+            </form>
         </div>
 
 
-    <div id="div-2">
-        <!-- 模块2 -->
-        <form class="layui-form" action="${pageContext.request.contextPath}/AuthenticationRequest/Logins" method="post">
-            <div class="layui-form-item">
+        <div id="div-2">
+            <!-- 模块2 -->
+            <form class="layui-form" action="${pageContext.request.contextPath}/AuthenticationRequest/Logins" method="post">
+                <div class="layui-form-item">
 
-                <div class="layui-inline">
+                    <div class="layui-inline">
 
-                    <div class="layui-input-inline" style="width: 300px;">
-                        <input type="text" name="email" lay-verify="email" id="dynamicemail" autocomplete="off"
-                               placeholder="请输入邮箱" class="layui-input">
+                        <div class="layui-input-inline" style="width: 300px;">
+                            <input type="text" name="email" lay-verify="email" id="dynamicemail" autocomplete="off"
+                                   placeholder="请输入邮箱" class="layui-input">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="layui-form-item">
+                <div class="layui-form-item">
 
-                <div class="layui-inline">
+                    <div class="layui-inline">
 
-                    <div class="layui-input-inline" style="width: 170px;">
-                        <input type="text" name="password" lay-verify="required|isCode" autocomplete="off" placeholder="请输入验证码"
-                               class="layui-input">
+                        <div class="layui-input-inline" style="width: 170px;">
+                            <input type="text" name="password" lay-verify="required|isCode" autocomplete="off" placeholder="请输入验证码"
+                                   class="layui-input">
+                        </div>
                     </div>
+
+                    <button type="button" style="width:106px" class="layui-btn layui-btn-disabled"  id="TencentCaptcha" data-appid="2068666293" data-cbfn="callback" disabled>获取验证码</button>
                 </div>
 
-                <button type="button" style="width:106px" class="layui-btn layui-btn-disabled"  id="TencentCaptcha" data-appid="2068666293" data-cbfn="callback" disabled>获取验证码</button>
-            </div>
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1" style="width: 300px;">登录</button>
+                <a>忘记密码</a> |
+                <a>注册</a>
+            </form>
+        </div>
 
-            <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1" style="width: 300px;">登录</button>
-<%--            <a>忘记密码</a> |--%>
-            <a href="${pageContext.request.contextPath}/jsp/lkl/Register.jsp">注册</a>
-        </form>
     </div>
-
-</div>
 </div>
 </body>
 </html>

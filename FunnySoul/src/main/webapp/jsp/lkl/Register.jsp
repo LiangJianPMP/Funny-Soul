@@ -275,7 +275,7 @@
 
     <div id="div-style">
         已有账号？立即登录
-        <button type="button" class="layui-btn layui-btn-primary" lay-filter="demo1">点击登录</button>
+        <button type="button" onclick="window.location.href='${pageContext.request.contextPath}/jsp/lkl/Login.jsp'" class="layui-btn layui-btn-primary" lay-filter="demo1">点击登录</button>
 
     </div>
 </div>

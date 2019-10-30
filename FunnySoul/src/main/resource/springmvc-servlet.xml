@@ -72,8 +72,11 @@
 
     <!-- 配置MultipartResolver，用于上传文件，使用spring的CommonsMultipartResolver -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="5000000"/>
+        <property name="maxUploadSize" value="500000000"/>
         <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 最大内存大小 (40960)-->
+        <property name="maxInMemorySize" value="40960000" />
+
     </bean>
 
     <!--  全局异常处理 -->

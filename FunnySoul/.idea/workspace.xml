@@ -6,7 +6,63 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4867c817-5210-4820-9b08-e01214e15979" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="4867c817-5210-4820-9b08-e01214e15979" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/PostMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/PostMsg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/PostMsgImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/PostMsgService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lkl/FileUpload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/lkl/SendDetails.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/lkl/UpdateUserPwd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4f85913c-a0ca-46d6-a613-1ae016084cad.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/about/AboutMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/about/AboutMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/post/PostMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/post/PostMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/praise/PraiseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/praise/PraiseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/entity/FsComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csdj/entity/FsComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/entity/FsPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csdj/entity/FsPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/comment/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/comment/CommentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/post/PostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/post/PostServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/praise/PraiseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/praise/PraiseServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/HomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostDetailedServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/UserDetailedServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lkl/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lkl/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/tool/lk/ActionResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/csdj/tool/lk/text" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/springmvc-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/springmvc-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/lk/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/lk/postdetailed.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/lk/userdetailed.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/lkl/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/lkl/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/lkl/Register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/lkl/Register.jsp" afterDir="false" />
+    </list>
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,19 +77,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1463">
               <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/Login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/UpdateUserPwd.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5175">
+              <caret line="225" column="26" selection-start-line="225" selection-start-column="26" selection-end-line="225" selection-end-column="26" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/postdetailed.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="832">
               <caret line="249" column="40" selection-start-line="249" selection-start-column="40" selection-end-line="249" selection-end-column="40" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/SendDetails.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/Writer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="826" selection-start-line="826" selection-end-line="826" />
+              <folding>
+                <element signature="e#22786#22787#0" expanded="true" />
+                <element signature="e#22821#22822#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/Register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6371">
+              <caret line="277" column="108" selection-start-line="277" selection-start-column="108" selection-end-line="277" selection-end-column="108" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
             </state>
           </provider>
         </entry>
@@ -44,9 +158,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+<<<<<<< HEAD
         <option value="Jsp File" />
+=======
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -62,6 +180,7 @@
       <find>show_user</find>
       <find>demo1</find>
       <find>../..</find>
+<<<<<<< HEAD
       <find>user_post</find>
       <find>\t</find>
       <find>keywords</find>
@@ -72,6 +191,12 @@
       <find>avatarPath</find>
       <find>picturePath</find>
       <find>videoPath</find>
+=======
+      <find>img-table</find>
+      <find>#img-table</find>
+      <find>file</find>
+      <find>textareamsg</find>
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     </findStrings>
     <replaceStrings>
       <replace>显示</replace>
@@ -85,11 +210,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/PostMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/postdetailed.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+=======
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/entity/FsPost.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/entity/FsComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/praise/PraiseMapper.xml" />
@@ -107,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/about/AboutMapper.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostDetailedServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/about/UserMapper.xml" />
@@ -128,10 +257,44 @@
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/SearchServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/HomeServlet.java" />
+=======
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostDetailedServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/post/PostMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/post/PostService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/post/PostServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/about/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/about/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/about/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/UserDetailedServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/js/lk/postdetailed.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resource/js/lk/userdetailed.js" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/userdetailed.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/search.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/postdetailed.jsp" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/post/PostMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/SearchServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lk/search.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/PostMsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/PostMsgImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/PostMsgService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/PostMsg.xml" />
+        <option value="$PROJECT_DIR$/src/main/resource/springmvc-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/csdj/servlet/lkl/FileUpload.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lkl/UpdateUserPwd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lkl/Register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lkl/Login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lkl/SendDetails.jsp" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
       </list>
     </option>
   </component>
@@ -157,8 +320,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="260" />
     <option name="y" value="20" />
+=======
+    <option name="x" value="115" />
+    <option name="y" value="-18" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -167,6 +335,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,6 +368,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="Funny Soul" type="b2602c69:ProjectViewProjectNode" />
@@ -208,6 +378,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="csdj" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
             </path>
             <path>
               <item name="Funny Soul" type="b2602c69:ProjectViewProjectNode" />
@@ -238,6 +410,7 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="Funny Soul" type="b2602c69:ProjectViewProjectNode" />
               <item name="FunnySoul" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
@@ -255,12 +428,13 @@
               <item name="lk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+=======
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
               <item name="Funny Soul" type="b2602c69:ProjectViewProjectNode" />
               <item name="FunnySoul" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Funny Soul" type="b2602c69:ProjectViewProjectNode" />
@@ -268,8 +442,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="resource" type="462c0819:PsiDirectoryNode" />
               <item name="postFile" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
             </path>
             <path>
               <item name="Funny Soul" type="b2602c69:ProjectViewProjectNode" />
@@ -277,22 +455,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="resource" type="462c0819:PsiDirectoryNode" />
               <item name="postFile" type="462c0819:PsiDirectoryNode" />
               <item name="video" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="lkl" type="462c0819:PsiDirectoryNode" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="D:/PGSW/IDEA工作区间" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -302,6 +488,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+<<<<<<< HEAD
+=======
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
@@ -315,11 +507,19 @@
       <recent name="com.csdj.dao.lk.praise" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\resource\postFile\video" />
       <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\resource\postFile\picture" />
       <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\resource\postFile\avatarPath" />
       <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\resource\postFile" />
       <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\resource\css\lk" />
+=======
+      <recent name="C:\Users\29007\Desktop\项目\项目er\Funny-Soul\FunnySoul\src\main\java\com\csdj\dao\lkl" />
+      <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\resource\css\lk" />
+      <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\webapp\jsp\lk" />
+      <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\java\com\csdj\service\lk" />
+      <recent name="D:\编程文件\项目组\全部项目\幽默网站\项目\FunnySoul\src\main\java\com\csdj\dao\lk\user" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     </key>
   </component>
   <component name="RunDashboard">
@@ -336,6 +536,10 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+<<<<<<< HEAD
+=======
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/FunnySoul/" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="FunnySoul:war">
@@ -345,7 +549,11 @@
         </artifact>
       </deployment>
       <server-settings>
+<<<<<<< HEAD
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_Funny_Soul_4" />
+=======
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Funny_Soul" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -353,7 +561,11 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
+<<<<<<< HEAD
         <option name="DEBUG_PORT" value="53476" />
+=======
+        <option name="DEBUG_PORT" value="50669" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -434,6 +646,7 @@
       <workItem from="1572240563207" duration="1287000" />
       <workItem from="1572243206300" duration="2820000" />
       <workItem from="1572247557140" duration="429000" />
+<<<<<<< HEAD
       <workItem from="1572248908145" duration="895000" />
       <workItem from="1572249980494" duration="1101000" />
       <workItem from="1572258963411" duration="171000" />
@@ -447,17 +660,35 @@
       <workItem from="1572327249619" duration="924000" />
       <workItem from="1572339071917" duration="32000" />
       <workItem from="1572339107821" duration="4000" />
+=======
+      <workItem from="1572248908145" duration="26000" />
+      <workItem from="1572264717155" duration="4552000" />
+      <workItem from="1572318751509" duration="4436000" />
+      <workItem from="1572327251966" duration="615000" />
+      <workItem from="1572338810619" duration="1640000" />
+      <workItem from="1572341639532" duration="2370000" />
+      <workItem from="1572361749989" duration="3409000" />
+      <workItem from="1572398288572" duration="3014000" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="105628000" />
+=======
+    <option name="totallyTimeSpent" value="99026000" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24147122" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30383795" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -467,8 +698,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.3802817" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.47722343" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.55314535" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -496,6 +732,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -629,6 +866,37 @@
         </state>
       </provider>
     </entry>
+=======
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Funny_Soul$Tomcat_8_5_45.ic" NAME="Tomcat 8.5.45 Coverage Results" MODIFIED="1572327578111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/about/AboutServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/about/AboutMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/about/AboutMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostDetailedServlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/post/PostServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/post/PostService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/js/lk/postdetailed.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/js/lk/userdetailed.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/userdetailed.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/lk/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/lk/postdetailed.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
@@ -636,6 +904,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/lk/userdetailed.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="779">
@@ -648,14 +917,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/.name">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/lk/about.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state relative-caret-position="58">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/postdetailed.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/post/PostMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/post/PostMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lk/user/UserService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/HomeServlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/UserDetailedServlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/SearchServlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/home.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/lk/userdetailed.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resource/css/lk/search.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/search.jsp" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6317" column="4" selection-start-line="6317" selection-start-column="4" selection-end-line="6317" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/comment/CommentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -761,10 +1059,57 @@
             <element signature="e#945#946#0" expanded="true" />
             <element signature="e#1169#1170#0" expanded="true" />
             <element signature="e#1232#1233#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/entity/FsPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/PostMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/AuthenticationRequestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/VerificationUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/PostMsgService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/service/lkl/PostMsgImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lk/user/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -796,12 +1141,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+=======
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/multipart/commons/CommonsMultipartFile.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/VerificationUserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/springmvc-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1702">
+          <caret line="74" column="55" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/dao/lkl/PostMsg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lkl/AuthenticationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="55" selection-start-line="55" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lkl/FileUpload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2144">
+          <caret line="144" column="30" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/com/csdj/servlet/lk/PostDetailedServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-75">
@@ -843,25 +1230,149 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="152" column="66" selection-start-line="152" selection-start-column="66" selection-end-line="152" selection-end-column="66" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/ref/ReferenceQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/Login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/UpdateUserPwd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5175">
+          <caret line="225" column="26" selection-start-line="225" selection-start-column="26" selection-end-line="225" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/Register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6371">
+          <caret line="277" column="108" selection-start-line="277" selection-start-column="108" selection-end-line="277" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="826" selection-start-line="826" selection-end-line="826" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
           <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#22786#22787#0" expanded="true" />
+            <element signature="e#22821#22822#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1463">
           <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lk/postdetailed.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lkl/SendDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="832">
           <caret line="249" column="40" selection-start-line="249" selection-start-column="40" selection-end-line="249" selection-end-column="40" />
+=======
+        <state relative-caret-position="153">
+          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> bd8025b12211ebe1648883acf2bbf0d689f5a81d
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FunnySoul</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
